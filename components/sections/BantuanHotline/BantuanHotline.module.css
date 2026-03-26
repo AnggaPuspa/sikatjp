@@ -1,0 +1,200 @@
+.capsuleWrapper {
+  padding: 2rem 1rem 8rem 1rem; 
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.capsule {
+  position: relative;
+  width: 100%;
+  border-radius: 48px; 
+  overflow: hidden;
+  padding: 6rem 0;
+  background: radial-gradient(circle at 10% 90%, #f472b6 0%, transparent 60%),
+    radial-gradient(circle at 90% 10%, #60a5fa 0%, transparent 50%),
+    linear-gradient(135deg, #a6c0fe 0%, #f9a8d4 50%, #fed7aa 100%);
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 32px; 
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.03);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.08); 
+}
+.badge {
+  display: inline-flex;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid #111827;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #111827;
+  margin-bottom: 2rem;
+  align-self: flex-start; 
+}
+.cardTitle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #111827;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 0 0 1rem 0;
+}
+.cardDesc {
+  font-size: 1.15rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 3rem 0;
+  flex-grow: 1; 
+}
+.actionBtn {
+  background-color: #111827;
+  color: #ffffff;
+  padding: 1.5rem 2.25rem;
+  border-radius: 999px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+.actionBtn:hover .arrowIcon {
+  transform: translateX(6px);
+}
+.redBtn { background-color: #ef4444; }
+.redBtn:hover { background-color: #dc2626; padding: 1.5rem 2rem 1.5rem 2.5rem; }
+.blueBtn { background-color: #3b82f6; }
+.blueBtn:hover { background-color: #2563eb; padding: 1.5rem 2rem 1.5rem 2.5rem; }
+.amberBtn { background-color: #111827; }
+.amberBtn:hover { background-color: #1f2937; padding: 1.5rem 2rem 1.5rem 2.5rem; }
+.darkBtn { background-color: #111827; }
+.darkBtn:hover { background-color: #1f2937; padding: 1.5rem 2rem 1.5rem 2.5rem; }
+.highlightedCard {
+  background: linear-gradient(135deg, #111827 0%, #172033 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.highlightedCard .cardTitle {
+  color: #ffffff;
+}
+.highlightedCard .cardDesc {
+  color: #9ca3af;
+}
+.highlightedCard .badge {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.sikatBtn {
+  background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
+  color: #111827;
+  border: none;
+  box-shadow: 0 4px 15px rgba(246, 128, 132, 0.2);
+}
+.sikatBtn:hover {
+  background: linear-gradient(135deg, #c2d4ff 0%, #ff9599 100%);
+  box-shadow: 0 8px 25px rgba(246, 128, 132, 0.4);
+  padding: 1.5rem 2rem 1.5rem 2.5rem;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .capsuleWrapper {
+    padding: 0 0.5rem 3rem 0.5rem;
+  }
+  .capsule {
+    border-radius: 24px;
+    padding: 3rem 0;
+  }
+  .card {
+    padding: 2.5rem 1.75rem;
+    border-radius: 20px;
+  }
+  .cardTitle {
+    font-size: 1.75rem;
+  }
+  .cardDesc {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .actionBtn {
+    padding: 1.25rem 1.75rem;
+    font-size: 1rem;
+  }
+  .redBtn:hover,
+  .blueBtn:hover,
+  .amberBtn:hover,
+  .darkBtn:hover,
+  .sikatBtn:hover {
+    padding: 1.25rem 1.5rem 1.25rem 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .capsuleWrapper {
+    padding: 0 0.25rem 2.5rem 0.25rem;
+  }
+  .capsule {
+    border-radius: 20px;
+    padding: 2.5rem 0;
+  }
+  .grid {
+    gap: 1.25rem;
+  }
+  .card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+  .cardDesc {
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+  }
+  .badge {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+  .actionBtn {
+    padding: 1.1rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 16px;
+  }
+}

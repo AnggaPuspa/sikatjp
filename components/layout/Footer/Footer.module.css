@@ -1,0 +1,291 @@
+.footerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+.bannerWrapper {
+    width: 100%;
+    max-width: none;
+    position: relative;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
+    display: flex;
+    min-height: 480px;
+    box-shadow: 0 -24px 48px rgba(0, 0, 0, 0.04);
+}
+.abstractBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 90% 10%, #60a5fa 0%, transparent 40%),
+        radial-gradient(circle at 10% 90%, #f472b6 0%, transparent 50%),
+        radial-gradient(circle at 50% 110%, #d8b4fe 0%, transparent 50%),
+        linear-gradient(120deg, #93c5fd 0%, #e9d5ff 50%, #fed7aa 100%);
+    z-index: 1;
+}
+.arc1 {
+    position: absolute;
+    width: 1200px;
+    height: 1200px;
+    border-radius: 50%;
+    border: 100px solid rgba(36, 188, 255, 0.15);
+    box-shadow:
+        inset -30px 30px 80px rgba(244, 114, 182, 0.4),
+        -20px 20px 60px rgba(96, 165, 250, 0.3);
+    top: -200px;
+    left: -400px;
+    z-index: 2;
+    transform: rotate(-15deg);
+}
+.arc2 {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    border: 80px solid rgba(244, 114, 182, 0.1);
+    box-shadow:
+        inset -20px 20px 60px rgba(216, 180, 254, 0.5),
+        -10px 10px 40px rgba(244, 114, 182, 0.2);
+    top: 100px;
+    left: -200px;
+    z-index: 3;
+    transform: rotate(-5deg);
+}
+.contentOverlay {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 4rem;
+}
+.leftColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 500px;
+}
+.sphereWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.sphere {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 35% 35%,
+        #ffffff 0%,
+        #e8b2ff 25%,
+        #60a5fa 65%,
+        #c084fc 100%
+    );
+    box-shadow:
+        inset -5px -5px 15px rgba(0, 0, 0, 0.1),
+        0 8px 16px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+.heroTitle {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1.05;
+    color: #111827;
+    letter-spacing: -0.05em;
+    margin: 0;
+}
+.description {
+    color: #374151;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 0;
+}
+.ctaButton {
+    background-color: #0a0a0a;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 6px,
+        rgba(255, 255, 255, 0.04) 6px,
+        rgba(255, 255, 255, 0.04) 12px
+    );
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 1.25rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+.ctaButton:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(10, 10, 10, 0.2);
+}
+.arrowIcon {
+    transition: transform 0.3s ease;
+}
+.ctaButton:hover .arrowIcon {
+    transform: translateX(4px);
+}
+.glassCard {
+    width: 420px;
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(24px) saturate(140%);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 3rem 2.5rem;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.linksGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 1.5rem;
+}
+.linkGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.groupTitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #111827;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.8;
+}
+.linkItem {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+    transform-origin: left center;
+}
+.linkItem:hover {
+    color: #111827;
+    transform: translateX(4px);
+}
+.copyright {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.85rem;
+    color: #6b7280;
+    text-align: left;
+    line-height: 1.5;
+}
+@media (max-width: 1024px) {
+    .contentOverlay {
+        flex-direction: column;
+        padding: 3.5rem 2.5rem;
+        gap: 3rem;
+    }
+    .leftColumn {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .sphereWrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .heroTitle {
+        line-height: 1.1;
+        text-align: center;
+    }
+    .description {
+        text-align: center;
+    }
+    .ctaButton {
+        margin-top: 1.5rem;
+    }
+    .glassCard {
+        width: 100%;
+        max-width: none;
+    }
+}
+@media (max-width: 768px) {
+    .footerContainer {
+        padding: 0;
+    }
+    .bannerWrapper {
+        border-radius: 24px 24px 0 0;
+        width: 100%;
+        min-height: 400px;
+    }
+    .contentOverlay {
+        padding: 2.5rem 1.5rem;
+    }
+    .sphere {
+        width: 44px;
+        height: 44px;
+    }
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .ctaButton {
+        padding: 1.1rem 2rem;
+        font-size: 0.95rem;
+    }
+    .glassCard {
+        padding: 2.5rem 1.75rem;
+        border-radius: 20px;
+    }
+    .linksGrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .linkItem {
+        font-size: 0.95rem;
+    }
+    .copyright {
+        font-size: 0.8rem;
+        margin-top: 2.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .heroTitle {
+        font-size: 2rem;
+    }
+    .contentOverlay {
+        padding: 2rem 1.25rem;
+    }
+    .glassCard {
+        padding: 2rem 1.5rem;
+    }
+    .sphere {
+        width: 40px;
+        height: 40px;
+    }
+}

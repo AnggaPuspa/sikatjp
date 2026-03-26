@@ -1,0 +1,246 @@
+.timelineSection {
+  background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
+  padding: 3.5rem 0 5rem 0; 
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+.timelineSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 90% 10%, #60a5fa 0%, transparent 40%),
+    radial-gradient(circle at 10% 90%, #f472b6 0%, transparent 50%),
+    radial-gradient(circle at 50% 110%, #d8b4fe 0%, transparent 50%),
+    linear-gradient(120deg, #93c5fd 0%, #e9d5ff 50%, #fed7aa 100%);
+  z-index: 0;
+}
+.container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 400;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.05em;
+}
+.navControls {
+  display: flex;
+  gap: 1rem;
+}
+.navBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid #111827;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #111827;
+}
+.navBtn:hover {
+  background-color: #111827;
+  color: #ffffff;
+}
+.timelineTrack {
+  display: flex;
+  gap: 4rem;
+  position: relative;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.timelineTrack::-webkit-scrollbar {
+  display: none;
+}
+.connectingLine {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: max(100%, 1800px);
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.7) 5%, rgba(255, 255, 255, 0.7) 95%, transparent 100%);
+  z-index: 0;
+}
+.milestoneNode {
+  min-width: 380px;
+  width: 420px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.yearPoint {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.yearPoint::before {
+  content: '';
+  position: absolute;
+  left: 6.5px;
+  top: 16px;
+  width: 1.5px;
+  height: calc(100% + 2rem);
+  background-color: #ffffff;
+  opacity: 0.6;
+  z-index: -1;
+}
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.yearText {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #111827;
+  letter-spacing: -0.05em;
+  background-color: transparent;
+  padding-right: 1.5rem;
+  margin-left: -2px;
+  line-height: 1;
+}
+.eventCard {
+  position: relative;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.04);
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+}
+.eventCard:hover {
+  transform: translateY(-4px);
+}
+.num {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  display: block;
+}
+.cardTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #111827;
+  letter-spacing: -0.04em;
+  margin: 0 0 1rem 0;
+}
+.cardDesc {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .timelineSection {
+    padding: 3rem 0;
+    border-radius: 16px;
+  }
+  .header {
+    margin-bottom: 2rem;
+  }
+  .title {
+    font-size: 2.25rem;
+  }
+  .navBtn {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+  .milestoneNode {
+    min-width: 80vw;
+    width: 80vw;
+    scroll-snap-align: center;
+  }
+  .timelineTrack {
+    gap: 1.25rem;
+    scroll-snap-type: x mandatory;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .yearText {
+    font-size: 2.5rem;
+  }
+  .eventCard {
+    padding: 2rem 1.5rem;
+  }
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+  .cardDesc {
+    font-size: 1rem;
+  }
+  .num {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .timelineSection {
+    padding: 2.5rem 0;
+    border-radius: 12px;
+  }
+  .title {
+    font-size: 1.85rem;
+  }
+  .navBtn {
+    width: 40px;
+    height: 40px;
+  }
+  .milestoneNode {
+    min-width: 85vw;
+    width: 85vw;
+  }
+  .yearText {
+    font-size: 2rem;
+  }
+  .eventCard {
+    padding: 1.75rem 1.25rem;
+  }
+  .cardTitle {
+    font-size: 1.35rem;
+  }
+  .cardDesc {
+    font-size: 0.95rem;
+  }
+}

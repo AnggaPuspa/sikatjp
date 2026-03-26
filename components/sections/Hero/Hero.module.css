@@ -1,0 +1,250 @@
+.heroSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: transparent;
+}
+.heroContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 4rem;
+}
+.leftColumn {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #111827;
+  letter-spacing: -0.05em;
+  margin: 0;
+  text-align: left;
+}
+.line1 {
+  display: block;
+}
+.line2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.sphere {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #e8b2ff 25%, #60a5fa 65%, #c084fc 100%);
+  box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+.line3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.titleStar {
+  width: 36px;
+  height: 36px;
+  color: #111827;
+}
+.rightColumn {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2rem;
+  max-width: 440px;
+}
+.description {
+  color: #6b7280;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+.features {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #374151;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  color: #10b981;
+}
+.ctaButton {
+  background-color: #0a0a0a;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.04) 6px,
+    rgba(255, 255, 255, 0.04) 12px
+  );
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 1.25rem 4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.2s;
+  text-align: center;
+}
+.ctaButton:hover {
+  opacity: 0.9;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .heroContent {
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+  }
+  .leftColumn {
+    align-items: center;
+    text-align: center;
+  }
+  .title {
+    font-size: 3.5rem;
+    align-items: center;
+  }
+  .rightColumn {
+    padding-top: 0;
+    max-width: 100%;
+    align-items: center;
+  }
+  .description {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 2rem 1.5rem;
+  }
+  .heroContent {
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .leftColumn {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .title {
+    font-size: 2.75rem;
+    align-items: flex-start;
+  }
+  .line2 {
+    gap: 0.5rem;
+  }
+  .sphere {
+    width: 36px;
+    height: 36px;
+  }
+  .titleStar {
+    width: 22px;
+    height: 22px;
+  }
+  .rightColumn {
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+  }
+  .description {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+  .features {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .featureItem {
+    font-size: 0.85rem;
+  }
+  .ctaButton {
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 1.5rem 1.25rem;
+  }
+  .heroContent {
+    gap: 1rem;
+  }
+  .badge {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.65rem;
+    margin-bottom: 0.75rem;
+  }
+  .title {
+    font-size: 2.15rem;
+  }
+  .sphere {
+    width: 30px;
+    height: 30px;
+  }
+  .titleStar {
+    width: 18px;
+    height: 18px;
+  }
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .features {
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .featureItem {
+    font-size: 0.8rem;
+  }
+  .checkIcon {
+    width: 16px;
+    height: 16px;
+  }
+  .ctaButton {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

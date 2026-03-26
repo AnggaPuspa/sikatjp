@@ -1,0 +1,272 @@
+.section {
+  width: 100%;
+  background-color: transparent; 
+  color: #111827;
+  padding: 2rem 0 8rem 0; 
+  margin-top: 0; 
+  overflow: hidden; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+.header {
+  position: relative;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 400; 
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  max-width: 800px;
+}
+.controlsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.filterTabs {
+  display: flex;
+  gap: 0.5rem;
+}
+.yearTab {
+  background: transparent;
+  border: none;
+  background-color: rgba(17, 24, 39, 0.05); 
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  letter-spacing: -0.01em;
+}
+.yearTab:hover {
+  background-color: rgba(17, 24, 39, 0.1);
+  color: #111827;
+}
+.activeTab {
+  background-color: #111827; 
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(17,24,39,0.2);
+}
+.activeTab:hover {
+  background-color: #111827; 
+  color: #ffffff;
+}
+.navButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+.navBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(17,24,39,0.2);
+  background: #ffffff;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.navBtn:hover {
+  background: #111827;
+  color: #ffffff;
+}
+.timelineWrapper {
+  position: relative;
+  width: 100%;
+}
+.timelineAxis {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: rgba(17,24,39,0.2);
+  z-index: 1;
+}
+.scrollContainer {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+.timelineGrid {
+  display: flex;
+  gap: 3rem;
+  padding-top: 1rem;
+  width: max-content; 
+  padding-right: 4rem; 
+}
+.timelineItem {
+  position: relative;
+  padding-top: 2.5rem; 
+  display: flex;
+  flex-direction: column;
+  width: 280px; 
+  flex-shrink: 0;
+  scroll-snap-align: start; 
+}
+.node {
+  position: absolute;
+  top: -4.5px; 
+  left: 0;
+  width: 11px;
+  height: 11px;
+  background: #111827;
+  border-radius: 50%;
+  z-index: 2;
+}
+.brandSubtitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.awardTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.metaGroup {
+  margin-bottom: 1.25rem;
+}
+.metaLabel {
+  display: block;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+.metaValue {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
+}
+.metaHighlight {
+  font-size: 0.95rem;
+  color: #111827;
+  font-weight: 700;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .section { 
+    padding: 3rem 0; 
+    overflow: hidden; 
+  }
+  .header {
+    margin-bottom: 2rem;
+  }
+  .title { 
+    font-size: 2rem; 
+  }
+  .controlsRow { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .yearTab {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+  .navBtn {
+    width: 42px;
+    height: 42px;
+  }
+  .scrollContainer {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+  }
+  .timelineGrid {
+    flex-direction: row;
+    gap: 1.25rem;
+    width: max-content;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .timelineItem {
+    width: 80vw;
+    min-width: 80vw;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    padding-top: 2.5rem;
+    padding-left: 0;
+  }
+  .awardTitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .metaValue {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+  .header {
+    margin-bottom: 1.5rem;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  .controlsRow {
+    margin-bottom: 1.5rem;
+  }
+  .yearTab {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.85rem;
+  }
+  .navBtn {
+    width: 38px;
+    height: 38px;
+  }
+  .timelineItem {
+    width: 85vw;
+    min-width: 85vw;
+  }
+  .timelineGrid {
+    gap: 1rem;
+  }
+  .awardTitle {
+    font-size: 1.15rem;
+  }
+  .brandSubtitle {
+    font-size: 0.7rem;
+  }
+  .metaValue, .metaHighlight {
+    font-size: 0.85rem;
+  }
+  .metaLabel {
+    font-size: 0.75rem;
+  }
+}

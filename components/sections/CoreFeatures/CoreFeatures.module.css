@@ -1,0 +1,1160 @@
+.section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 3rem 2rem 8rem;
+    background-color: transparent;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    gap: 4rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+}
+
+.badgeSolid {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1.5px solid #111827;
+    color: #111827;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #111827;
+    letter-spacing: -0.05em;
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+.tabsContainer {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1.5px solid #111827;
+    border-radius: 999px;
+    padding: 0.5rem;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.tabBtn {
+    background-color: transparent;
+    color: #6b7280;
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.tabActive {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.cardContainer {
+    width: 100%;
+    position: relative;
+    min-height: 500px;
+}
+
+.fullCard {
+    background-color: transparent;
+    border: 1.5px solid #111827;
+    border-radius: 20px;
+    padding: 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    animation: fadeIn 0.4s ease-out;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fullCard * {
+    text-align: left;
+}
+
+.cardHeader {
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #111827;
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem 0;
+}
+
+.cardDesc {
+    font-size: 1.05rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.judolLayout {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.inputGroup {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2.5px solid #111827;
+    padding-bottom: 0.5rem;
+    min-width: 0;
+}
+
+.currency {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    font-variant-numeric: tabular-nums;
+    color: #111827;
+    margin-right: 1.25rem;
+    line-height: 1;
+}
+
+.inputField {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    font-variant-numeric: tabular-nums;
+    color: #111827;
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+    line-height: 1;
+    padding: 0;
+    min-width: 0;
+}
+
+.inputField::placeholder {
+    color: #d1d5db;
+}
+
+.inputField::-webkit-outer-spin-button,
+.inputField::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ctaButton {
+    background-color: #0a0a0a;
+    background-image: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 6px,
+            rgba(255, 255, 255, 0.04) 6px,
+            rgba(255, 255, 255, 0.04) 12px);
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 1.25rem 4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    height: fit-content;
+    transition: opacity 0.2s;
+    min-width: fit-content;
+}
+
+.ctaButton:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.ctaButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #4b5563;
+    text-transform: uppercase;
+}
+
+.inputRegular {
+    font-family: inherit;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #111827;
+    border: 1.5px solid #111827;
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    background: transparent;
+    outline: none;
+    letter-spacing: -0.03em;
+    transition: background-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.inputRegular:focus {
+    background-color: rgba(17, 24, 39, 0.02);
+}
+
+.ctaButtonAlt {
+    background-color: transparent;
+    color: #111827;
+    border: 1.5px solid #111827;
+    border-radius: 999px;
+    padding: 1.25rem 4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    width: fit-content;
+    transition: all 0.2s;
+}
+
+.ctaButtonAlt:hover {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.resultDashboard {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.resultInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.resultLabel {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.resultValue {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    color: #111827;
+    line-height: 1;
+    word-break: break-word;
+}
+
+.crashedValue {
+    color: #111827;
+}
+
+.alert {
+    flex: 1;
+    min-width: 250px;
+    color: #111827;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.aviatorGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.aviatorLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.aviatorRight {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.multiplierDisplay {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1.5px solid #111827;
+}
+
+.multiplierLabel {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+.multiplierValue {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    font-variant-numeric: tabular-nums;
+    color: #111827;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.multiplierCrashed {
+    color: #111827;
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+}
+
+.crashInfo {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.inputStack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.btnRow {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.factBox {
+    padding: 1.75rem;
+    border: 1.5px solid #111827;
+    border-radius: 20px;
+}
+
+.factLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.factText {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.statRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.statCard {
+    border: 1.5px solid #111827;
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.statLabel {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+.statValue {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+    color: #111827;
+    line-height: 1.2;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+.statNegative {
+    color: #111827;
+}
+
+.statPositive {
+    color: #111827;
+}
+
+.statMeta {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 0.25rem;
+}
+
+.insightBar {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    background-color: #111827;
+    border-radius: 14px;
+    flex-wrap: wrap;
+}
+
+.insightKey {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    white-space: nowrap;
+}
+
+.insightVal {
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    color: #ffffff;
+}
+
+.insightNote {
+    font-size: 0.82rem;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+.historyBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.historyLabel {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+.historyEmpty {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.historyList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.historyItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.historyLoss {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.historyWin {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.verdictBlock {
+    padding: 1.75rem;
+    border: 1.5px solid #111827;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.verdictLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #111827;
+}
+
+.verdictText {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.progressSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.progressLabelRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.progressLabelText {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+.progressLabelValue {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    color: #111827;
+}
+
+.progressBarTrack {
+    width: 100%;
+    height: 12px;
+    background-color: #f3f4f6;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progressBarFill {
+    height: 100%;
+    background-color: #111827;
+    border-radius: 999px;
+    transition: width 0.06s linear;
+}
+
+.progressBarDanger {
+    background-color: #374151;
+}
+
+.progressSubtext {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    line-height: 1.4;
+}
+
+.resultsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.resultCard {
+    border: 1.5px solid #111827;
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.resultSub {
+    font-size: 0.82rem;
+    color: #9ca3af;
+    line-height: 1.4;
+    margin-top: 0.25rem;
+}
+
+/* ===== BISA BELI BOX ===== */
+.bisaBeliBox {
+    background: transparent;
+    border: 1.5px solid #111827;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.bisaBeliLabel {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #111827;
+    margin-bottom: 0.6rem;
+}
+
+.bisaBeliList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.bisaBeliItem {
+    font-size: 0.88rem;
+    color: #374151;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bisaBeliIcon {
+    color: #111827;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+    .judolLayout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+
+    .inputGroup {
+        width: 100%;
+    }
+
+    .ctaButton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .fullCard {
+        padding: 2.5rem;
+    }
+
+    .resultDashboard {
+        padding: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .aviatorGrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .statRow {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .resultsGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 1rem 4rem;
+    }
+
+    .container {
+        width: 100%;
+        gap: 2.5rem;
+    }
+
+    .header {
+        max-width: 100%;
+    }
+
+    .badgeSolid {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.85rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .tabsContainer {
+        flex-direction: column;
+        border-radius: 16px;
+        width: 100%;
+        padding: 0.4rem;
+        margin-bottom: 0.75rem;
+        gap: 0.3rem;
+    }
+
+    .tabBtn {
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+        padding: 0.9rem 1.25rem;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+
+    .cardContainer {
+        min-height: auto;
+    }
+
+    .fullCard {
+        padding: 1.5rem 1.25rem;
+        border-radius: 16px;
+    }
+
+    .cardHeader {
+        margin-bottom: 1.75rem;
+    }
+
+    .cardTitle {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .cardDesc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .aviatorGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem 1rem;
+    }
+
+    .aviatorLeft {
+        display: contents;
+    }
+
+    .aviatorRight {
+        display: contents;
+    }
+
+    .progressSection {
+        grid-column: 1 / -1;
+        order: 1;
+    }
+
+    .inputStack {
+        order: 2;
+        align-self: start;
+    }
+
+    .bisaBeliBox {
+        order: 2;
+        align-self: start;
+    }
+
+    .statRow {
+        grid-column: 1 / -1;
+        order: 3;
+    }
+
+    .btnRow {
+        grid-column: 1 / -1;
+        order: 4;
+    }
+
+    .verdictBlock {
+        grid-column: 1 / -1;
+        order: 5;
+    }
+
+    .inputStack {
+        gap: 1.25rem;
+    }
+
+    .label {
+        font-size: 0.78rem;
+    }
+
+    .inputRegular {
+        font-size: 1rem;
+        padding: 0.85rem 1rem;
+        border-radius: 12px;
+    }
+
+    .btnRow {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .ctaButton,
+    .ctaButtonAlt {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .progressLabelValue {
+        font-size: 1.15rem;
+    }
+
+    .progressBarTrack {
+        height: 10px;
+    }
+
+    .progressSubtext {
+        font-size: 0.78rem;
+    }
+
+    .statCard {
+        padding: 1.15rem;
+        border-radius: 14px;
+        gap: 0.5rem;
+    }
+
+    .statLabel {
+        font-size: 0.72rem;
+    }
+
+    .statValue {
+        font-size: 1.1rem;
+    }
+
+    .statMeta {
+        font-size: 0.72rem;
+    }
+
+    .verdictBlock {
+        padding: 1.25rem;
+        border-radius: 14px;
+    }
+
+    .verdictLabel {
+        font-size: 0.7rem;
+    }
+
+    .verdictText {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    .bisaBeliBox {
+        padding: 0.85rem 1rem;
+        border-radius: 10px;
+    }
+
+    .bisaBeliLabel {
+        font-size: 0.72rem;
+    }
+
+    .bisaBeliItem {
+        font-size: 0.82rem;
+    }
+
+    .resultCard {
+        padding: 1.15rem;
+        border-radius: 14px;
+        gap: 0.25rem;
+    }
+
+    .resultLabel {
+        font-size: 0.78rem;
+    }
+
+    .resultValue {
+        font-size: 1.35rem;
+    }
+
+    .resultSub {
+        font-size: 0.75rem;
+    }
+
+    .resultsGrid {
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .alert {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        min-width: auto;
+    }
+
+    .currency,
+    .inputField {
+        font-size: 1.75rem;
+    }
+
+    .resultDashboard {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        gap: 1.25rem;
+    }
+
+    .factBox {
+        padding: 1.25rem;
+        border-radius: 14px;
+    }
+
+    .factLabel {
+        font-size: 0.7rem;
+    }
+
+    .factText {
+        font-size: 0.88rem;
+    }
+
+    .insightBar {
+        padding: 1rem 1.15rem;
+        border-radius: 12px;
+        gap: 0.5rem;
+    }
+
+    .insightVal {
+        font-size: 1.35rem;
+    }
+
+    .insightNote {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .aviatorGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .bisaBeliBox {
+        grid-column: 1;
+        order: 3;
+    }
+
+    .statRow {
+        order: 4;
+    }
+
+    .btnRow {
+        order: 5;
+    }
+
+    .verdictBlock {
+        order: 6;
+    }
+
+    .section {
+        padding: 1.5rem 0.85rem 3rem;
+    }
+
+    .container {
+        gap: 2rem;
+    }
+
+    .title {
+        font-size: 1.85rem;
+    }
+
+    .subtitle {
+        font-size: 0.88rem;
+    }
+
+    .fullCard {
+        padding: 1.25rem 1rem;
+        border-radius: 14px;
+    }
+
+    .cardTitle {
+        font-size: 1.1rem;
+    }
+
+    .cardDesc {
+        font-size: 0.85rem;
+    }
+
+    .inputRegular {
+        font-size: 0.95rem;
+        padding: 0.8rem 0.9rem;
+        border-radius: 10px;
+    }
+
+    .ctaButton,
+    .ctaButtonAlt {
+        padding: 0.9rem 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    .progressLabelValue {
+        font-size: 1rem;
+    }
+
+    .statValue {
+        font-size: 1rem;
+    }
+
+    .resultValue {
+        font-size: 1.25rem;
+    }
+
+    .currency,
+    .inputField {
+        font-size: 1.5rem;
+    }
+
+    .verdictBlock {
+        padding: 1rem;
+    }
+
+    .verdictText {
+        font-size: 0.82rem;
+    }
+
+    .bisaBeliItem {
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .section {
+        padding: 1.25rem 0.75rem 2.5rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .badgeSolid {
+        font-size: 0.68rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .tabBtn {
+        font-size: 0.88rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .fullCard {
+        padding: 1rem 0.85rem;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+    }
+
+    .inputRegular {
+        font-size: 0.9rem;
+        padding: 0.75rem 0.8rem;
+    }
+
+    .statCard {
+        padding: 1rem;
+    }
+
+    .resultCard {
+        padding: 1rem;
+    }
+
+    .resultValue {
+        font-size: 1.1rem;
+    }
+}

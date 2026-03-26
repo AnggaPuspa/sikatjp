@@ -1,0 +1,417 @@
+.section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: transparent; 
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 5rem;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+}
+.badgeSolid {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid #111827;
+  color: #111827;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+.header .badgeSolid { 
+  margin-bottom: 1.5rem;
+}
+.title {
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #111827;
+  letter-spacing: -0.05em;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+.subtitle {
+  color: #4b5563; 
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+  max-width: 750px;
+}
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem; 
+  width: 100%;
+}
+.calcCard {
+  grid-column: span 12;
+  border: 1.5px solid #111827;
+  border-radius: 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  padding: 0;
+}
+.calcContent {
+  flex: 1; 
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-right: none;
+}
+.calcTitle {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #111827;
+  letter-spacing: -0.05em;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+.calcDesc {
+  color: #4b5563;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 0 3rem 0;
+  text-align: left;
+  max-width: 90%;
+}
+.calcVisual {
+  width: calc( ((100% - 22rem) / 12) * 5 + 8rem ); 
+  flex-shrink: 0;
+  border-left: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; 
+  position: relative;
+  overflow: hidden;
+}
+.algoPipeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.pipeStep {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border: 1.5px solid #111827;
+  border-radius: 999px;
+  background-color: transparent;
+}
+.pipeText {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #111827;
+}
+.pipeArrow {
+  width: 1.5px;
+  height: 24px;
+  background-color: #111827;
+  position: relative;
+}
+.pipeArrow::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #111827;
+}
+.pipeMain {
+  border: 1.5px solid #111827;
+  border-radius: 999px; 
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+  background-color: transparent;
+}
+.pipeLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+.pipeLogic {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+.pipeEnd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border: 1.5px solid #ef4444; 
+  border-radius: 999px;
+  background-color: transparent;
+}
+.pipeTextRed {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ef4444;
+}
+.dataCard {
+  grid-column: span 7;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid #111827;
+  border-radius: 20px;
+  background-color: transparent;
+}
+.dataHeader {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.advocacyCard {
+  grid-column: span 5;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1.5px solid #111827;
+  border-radius: 20px;
+  background-color: transparent; 
+}
+.smallTitle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111827;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+.smallDesc {
+  color: #4b5563;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+}
+.ctaButton {
+  background-color: #0a0a0a;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent, transparent 6px,
+    rgba(255, 255, 255, 0.04) 6px, rgba(255, 255, 255, 0.04) 12px
+  );
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 1.25rem 3.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.ctaButton:hover {
+  opacity: 0.9;
+}
+.secondaryButton {
+  background-color: transparent;
+  border: 1.5px solid #111827;
+  border-radius: 999px;
+  padding: 1.1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+}
+.secondaryButton:hover {
+  background-color: #111827;
+  color: #ffffff;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .calcCard, .dataCard, .advocacyCard {
+    grid-column: span 1;
+  }
+  .calcCard {
+    flex-direction: column;
+  }
+  .calcContent, .calcVisual {
+    padding: 3rem;
+  }
+  .calcContent {
+    border-right: none;
+    border-bottom: none;
+  }
+  .calcVisual {
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    min-height: 300px;
+  }
+  .calcTitle {
+    font-size: 3rem;
+  }
+  .pipeMain {
+    padding: 1.5rem;
+  }
+  .pipeLogic {
+    font-size: 1.1rem;
+  }
+  .dataCard, .advocacyCard {
+    padding: 3.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+  .container {
+    gap: 2rem;
+    width: 95%;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .calcContent {
+    padding: 2.5rem 1.5rem;
+    order: 2;
+  }
+  .calcVisual {
+    order: 1;
+  }
+  .calcTitle {
+    font-size: 2rem;
+  }
+  .calcDesc {
+    font-size: 1rem;
+  }
+  .dataCard, .advocacyCard {
+    padding: 2.5rem 1.5rem;
+  }
+  .smallTitle {
+    font-size: 1.75rem;
+  }
+  .ctaButton, .secondaryButton {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .calcVisual {
+    padding: 2rem 1.5rem;
+    min-height: 250px;
+  }
+  .pipeStep, .pipeEnd {
+    padding: 0.6rem 1.5rem;
+  }
+  .pipeMain {
+    padding: 1rem 1.5rem;
+  }
+  .pipeText, .pipeTextRed {
+    font-size: 0.9rem;
+  }
+  .pipeLogic {
+    font-size: 1rem;
+  }
+  .pipeArrow {
+    height: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    padding: 1.5rem 1rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  .calcContent {
+    padding: 2rem 1.25rem;
+  }
+  .calcTitle {
+    font-size: 1.75rem;
+  }
+  .calcDesc {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  .calcVisual {
+    min-height: 250px;
+  }
+  .pipeText, .pipeTextRed {
+    font-size: 0.85rem;
+  }
+  .pipeLogic {
+    font-size: 0.95rem;
+  }
+  .pipeLabel {
+    font-size: 0.7rem;
+  }
+  .pipeMain {
+    padding: 0.85rem 1.25rem;
+  }
+  .pipeStep, .pipeEnd {
+    padding: 0.5rem 1.25rem;
+  }
+  .pipeArrow {
+    height: 14px;
+  }
+  .algoPipeline {
+    gap: 0.5rem;
+  }
+  .dataCard, .advocacyCard {
+    padding: 2rem 1.25rem;
+  }
+  .smallTitle {
+    font-size: 1.5rem;
+  }
+  .smallDesc {
+    font-size: 1rem;
+    margin: 1.5rem 0;
+  }
+}

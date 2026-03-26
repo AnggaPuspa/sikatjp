@@ -1,0 +1,228 @@
+.methodSection {
+  background-color: transparent; 
+  padding: 4rem 0 8rem 0; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 6rem;
+}
+.stickyCol {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+.stickyContent {
+  position: sticky;
+  top: 8rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 4rem; 
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 400; 
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+.subtitle {
+  font-size: 1.15rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 440px;
+}
+.scrollCol {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+.cardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; 
+}
+.methodCard {
+  background-color: transparent;
+  border: 1.5px solid #111827;
+  border-radius: 20px; 
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.methodCard:hover {
+  transform: translateY(-5px); 
+}
+.methodCard::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+  border: 1.5px solid #111827;
+  z-index: 0;
+}
+.cardHeader {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+.codeBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.codeTag {
+  font-family: monospace;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #111827;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.idTag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+}
+.cardBody {
+  position: relative;
+  z-index: 1;
+}
+.cardTitle {
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+.cardSubset {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #4b5563;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5px solid rgba(17, 24, 39, 0.15); 
+}
+.cardDesc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .methodSection {
+    padding: 6rem 0;
+  }
+  .container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .stickyCol {
+    width: 100%;
+  }
+  .stickyContent {
+    position: relative; 
+    top: 0;
+    padding-bottom: 0;
+  }
+  .scrollCol {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .methodSection {
+    padding: 3rem 0;
+  }
+  .container {
+    gap: 3rem;
+  }
+  .methodCard {
+    padding: 2.5rem 1.75rem;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+  .cardSubset {
+    font-size: 1rem;
+  }
+  .cardDesc {
+    font-size: 1rem;
+  }
+  .codeTag {
+    font-size: 2.5rem;
+  }
+  .cardsWrapper {
+    gap: 2rem;
+  }
+  .cardHeader {
+    margin-bottom: 1.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .methodSection {
+    padding: 2.5rem 0;
+  }
+  .container {
+    gap: 2.5rem;
+  }
+  .methodCard {
+    padding: 2rem 1.5rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .cardTitle {
+    font-size: 1.35rem;
+  }
+  .cardSubset {
+    font-size: 0.95rem;
+  }
+  .cardDesc {
+    font-size: 0.95rem;
+  }
+  .codeTag {
+    font-size: 2rem;
+  }
+  .cardsWrapper {
+    gap: 1.5rem;
+  }
+}

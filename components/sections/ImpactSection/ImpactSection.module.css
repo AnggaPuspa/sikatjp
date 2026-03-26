@@ -1,0 +1,164 @@
+.section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: transparent;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 2.5rem; 
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+}
+.badgeSolid {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid #111827;
+  color: #111827;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.statement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  border: 1.5px solid #111827;
+  border-radius: 20px;
+  padding: 5rem 4rem;
+}
+.bigNumber {
+  font-size: 10rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #111827;
+  letter-spacing: -0.06em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.statementLabel {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #111827;
+  letter-spacing: -0.02em;
+  margin: 2rem 0 1.5rem 0;
+  max-width: 500px;
+}
+.sourceTag {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  letter-spacing: 0.01em;
+}
+.statsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+.statCard {
+  background-color: transparent;
+  border: 1.5px solid #111827;
+  border-radius: 20px;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.statNumber {
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #111827;
+  letter-spacing: -0.05em;
+  margin-bottom: 1.5rem;
+}
+.statLabel {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6b7280;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .section {
+    padding: 4rem 2rem;
+  }
+  .bigNumber {
+    font-size: 7rem;
+  }
+  .statNumber {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1.5rem;
+  }
+  .container {
+    gap: 2rem;
+  }
+  .statement {
+    padding: 3.5rem 2.5rem;
+  }
+  .bigNumber {
+    font-size: 4.5rem;
+  }
+  .statementLabel {
+    font-size: 1.25rem;
+  }
+  .statsRow {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .statCard {
+    padding: 2.5rem 2rem;
+  }
+  .statNumber {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .statLabel {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    padding: 1.5rem 1rem;
+  }
+  .statement {
+    padding: 2.5rem 1.5rem;
+  }
+  .bigNumber {
+    font-size: 3.5rem;
+  }
+  .statNumber {
+    font-size: 2.5rem;
+  }
+  .statCard {
+    padding: 2rem 1.5rem;
+  }
+  .statementLabel {
+    font-size: 1.1rem;
+  }
+  .statLabel {
+    font-size: 0.95rem;
+  }
+}
