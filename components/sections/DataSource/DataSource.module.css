@@ -1,23 +1,41 @@
 .section {
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: visible;
   width: 100%;
   padding: 8rem 2rem;
   background-color: transparent;
 }
+
+.section::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, #60a5fa50, transparent 70%);
+  filter: blur(60px);
+  bottom: -200px;
+  left: -200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
 .container {
   display: flex;
   justify-content: center;
   width: 90%;
   max-width: 1200px;
 }
+
 .splitLayout {
   display: grid;
-  grid-template-columns: 1.2fr 1fr; 
+  grid-template-columns: 1.2fr 1fr;
   gap: 8rem;
   width: 100%;
   align-items: flex-start;
 }
+
 .leftColumn {
   display: flex;
   flex-direction: column;
@@ -25,30 +43,39 @@
   position: relative;
   padding-right: 2rem;
 }
+
 .card {
   position: relative;
   border-radius: 20px;
   padding: 3rem 3.5rem;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
-  border: 1.5px solid #111827;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   z-index: 1;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  width: 85%; 
+  width: 85%;
 }
+
 .card:hover {
-  transform: translateY(-4px); 
+  transform: translateY(-4px);
 }
+
 .card1 {
-  align-self: flex-end; 
+  align-self: flex-end;
 }
+
 .card2 {
-  align-self: flex-start; 
+  align-self: flex-start;
 }
+
 .card3 {
-  align-self: flex-end; 
+  align-self: flex-end;
 }
+
 .num {
   font-size: 0.85rem;
   font-weight: 600;
@@ -57,6 +84,7 @@
   margin-bottom: 0.5rem;
   display: block;
 }
+
 .cardTitle {
   font-size: 2.25rem;
   font-weight: 500;
@@ -65,6 +93,7 @@
   letter-spacing: -0.04em;
   margin: 0 0 1rem 0;
 }
+
 .cardDesc {
   font-size: 1.15rem;
   font-weight: 400;
@@ -72,17 +101,20 @@
   color: #4b5563;
   margin: 0;
 }
+
 .rightColumn {
   position: relative;
-  height: 100%; 
+  height: 100%;
 }
+
 .stickyContent {
   position: sticky;
-  top: 30vh; 
+  top: 30vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .badgeSolid {
   display: inline-flex;
   align-items: center;
@@ -96,6 +128,7 @@
   letter-spacing: 0.05em;
   margin-bottom: 2rem;
 }
+
 .title {
   font-size: 4.5rem;
   font-weight: 400;
@@ -105,68 +138,102 @@
   margin: 0;
   text-align: left;
 }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .section {
     padding: 6rem 2rem;
   }
+
+  .section::before {
+    width: 400px;
+    height: 400px;
+    top: 50px;
+    left: -120px;
+  }
+
+  .section::after {
+    width: 350px;
+    height: 350px;
+    bottom: -50px;
+    right: -80px;
+  }
+
   .splitLayout {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
+
   .leftColumn {
     padding-right: 0;
-    order: 2; 
+    order: 2;
     gap: 2rem;
   }
+
   .rightColumn {
     order: 1;
     height: auto;
   }
+
   .stickyContent {
     position: relative;
     top: 0;
   }
+
   .card {
     width: 100%;
   }
-  .card1, .card2, .card3 {
-    align-self: center; 
+
+  .card1,
+  .card2,
+  .card3 {
+    align-self: center;
   }
+
   .title {
     font-size: 3.5rem;
   }
 }
+
 @media (max-width: 768px) {
   .section {
     padding: 2.5rem 1.5rem;
   }
+
   .title {
     font-size: 3rem;
   }
+
   .card {
     padding: 2.5rem 2rem;
   }
+
   .cardTitle {
     font-size: 1.75rem;
   }
 }
+
 @media (max-width: 480px) {
   .section {
     padding: 2rem 1rem;
   }
+
   .title {
     font-size: 2.25rem;
   }
+
   .card {
     padding: 2rem 1.5rem;
   }
+
   .cardTitle {
     font-size: 1.5rem;
   }
+
   .cardDesc {
     font-size: 1rem;
   }
+
   .splitLayout {
     gap: 3rem;
   }

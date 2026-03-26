@@ -1,4 +1,3 @@
-'use client';
 import styles from './DataMethodology.module.css';
 export default function DataMethodology() {
   return (

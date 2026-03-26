@@ -112,14 +112,12 @@
   background-color: rgba(255, 255, 255, 0.05);
 }
 .sikatBtn {
-  background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
-  color: #111827;
+  background-color: #111827;
+  color: #ffffff;
   border: none;
-  box-shadow: 0 4px 15px rgba(246, 128, 132, 0.2);
 }
 .sikatBtn:hover {
-  background: linear-gradient(135deg, #c2d4ff 0%, #ff9599 100%);
-  box-shadow: 0 8px 25px rgba(246, 128, 132, 0.4);
+  background-color: #1f2937;
   padding: 1.5rem 2rem 1.5rem 2.5rem;
 }
 /* ===== RESPONSIVE ===== */

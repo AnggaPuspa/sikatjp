@@ -1,9 +1,8 @@
-'use client';
 import Link from 'next/link';
 import styles from './Hero.module.css';
 export default function Hero() {
   return (
-    <section className={styles.heroSection}>
+    <section id="hero" className={styles.heroSection}>
       <div className={styles.heroContent}>
         <div className={styles.leftColumn}>
           <div className={styles.badge}>

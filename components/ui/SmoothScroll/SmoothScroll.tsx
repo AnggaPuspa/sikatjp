@@ -1,24 +1,25 @@
 "use client";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 
 export default function SmoothScroll() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.05,
+      lerp: 0.09,
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 0.5,
+      wheelMultiplier: 1,
       touchMultiplier: 1.5,
       infinite: false,
       autoResize: true,
     });
 
-    lenis.on("scroll", (e) => {
-      console.log("Lenis scrolling:", e.scroll);
-    });
+    lenis.scrollTo(0, { immediate: true });
 
     function raf(time: number) {
       lenis.raf(time);
@@ -27,12 +28,10 @@ export default function SmoothScroll() {
 
     requestAnimationFrame(raf);
 
-    console.log("Lenis initialized:", lenis);
-
     return () => {
       lenis.destroy();
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }

@@ -20,7 +20,7 @@ export default function LiveCounterHero() {
     ? currentAmount.toLocaleString("id-ID")
     : BASELINE_AMOUNT.toLocaleString("id-ID");
   return (
-    <section className={styles.section}>
+    <section id="hero" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.badgeWrapper}>
           <div className={styles.badge}>

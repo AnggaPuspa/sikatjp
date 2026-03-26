@@ -10,6 +10,7 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
 .abstractBg {
   position: absolute;
   top: 0;
@@ -22,6 +23,7 @@
     linear-gradient(120deg, #93c5fd 0%, #e9d5ff 50%, #fed7aa 100%);
   z-index: 1;
 }
+
 .arc1 {
   position: absolute;
   width: 1200px;
@@ -34,6 +36,7 @@
   z-index: 2;
   transform: rotate(-15deg);
 }
+
 .arc2 {
   position: absolute;
   width: 900px;
@@ -46,6 +49,7 @@
   z-index: 3;
   transform: rotate(-5deg);
 }
+
 .arc3 {
   position: absolute;
   width: 600px;
@@ -57,6 +61,7 @@
   left: -50px;
   z-index: 4;
 }
+
 .statsPillWrapper {
   position: absolute;
   bottom: 0;
@@ -69,6 +74,7 @@
   align-items: center;
   gap: 1rem;
 }
+
 .statsPillWrapper::after {
   content: '';
   position: absolute;
@@ -80,10 +86,12 @@
   border-bottom-left-radius: 24px;
   box-shadow: -10px 10px 0 10px #ffffff;
 }
+
 .avatars {
   display: flex;
   align-items: center;
 }
+
 .avatar {
   width: 36px;
   height: 36px;
@@ -93,14 +101,17 @@
   background-color: #e5e7eb;
   object-fit: cover;
 }
+
 .avatar:first-child {
   margin-left: 0;
 }
+
 .pillText {
   font-size: 0.95rem;
   font-weight: 500;
   color: #374151;
 }
+
 .glassCard {
   position: absolute;
   top: 50%;
@@ -122,15 +133,18 @@
   z-index: 10;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
+
 .counterGroup {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
+
 .descGroup {
   width: 250px;
   flex-shrink: 0;
 }
+
 .statValue {
   font-size: 3.2rem;
   font-weight: 600;
@@ -143,6 +157,7 @@
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+
 .statTitle {
   font-size: 1.15rem;
   font-weight: 600;
@@ -151,17 +166,20 @@
   letter-spacing: 0.05em;
   margin-bottom: 0;
 }
+
 .statDesc {
   color: #374151;
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .bannerWrapper {
     width: 95%;
     min-height: 480px;
   }
+
   .glassCard {
     flex-direction: column;
     width: 85%;
@@ -170,23 +188,28 @@
     gap: 2rem;
     text-align: center;
   }
+
   .counterGroup {
     align-items: center;
     width: 100%;
     overflow: hidden;
   }
+
   .descGroup {
     width: 100%;
   }
+
   .statValue {
     font-size: 2.6rem;
     justify-content: center;
     width: 100%;
   }
+
   .statDesc {
     text-align: center;
   }
 }
+
 @media (max-width: 768px) {
   .bannerWrapper {
     border-radius: 20px;
@@ -197,6 +220,7 @@
     width: auto;
     overflow: hidden;
   }
+
   .glassCard {
     position: relative;
     top: auto;
@@ -211,40 +235,51 @@
     padding: 2.5rem 2rem;
     border: 1px solid rgba(17, 24, 39, 0.1);
   }
+
   .statValue {
     font-size: 2.8rem;
   }
+
   .statTitle {
     font-size: 1.15rem;
   }
+
   .statDesc {
     font-size: 0.85rem;
   }
+
   .statsPillWrapper {
     display: none;
   }
+
   .pillText {
     font-size: 0.85rem;
     text-align: center;
   }
+
   .avatars {
     flex-wrap: wrap;
   }
+
   .avatar {
     width: 32px;
     height: 32px;
   }
 }
+
 @media (max-width: 480px) {
   .glassCard {
     padding: 2rem 1.5rem;
   }
+
   .statValue {
     font-size: 1.8rem;
   }
+
   .statTitle {
     font-size: 1.05rem;
   }
+
   .pillText {
     font-size: 0.8rem;
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './BantuanHero.module.css';
 export default function BantuanHero() {
   return (
-    <section className={styles.heroSection}>
+    <section id="hero" className={styles.heroSection}>
       <div className={styles.container}>
         <div className={styles.badge}>
           <span className={styles.pulse}></span>

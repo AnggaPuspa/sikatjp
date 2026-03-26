@@ -197,13 +197,13 @@ export default function CoreFeatures() {
             className={`${styles.tabBtn} ${activeTab === "judol" ? styles.tabActive : ""}`}
             onClick={() => setActiveTab("judol")}
           >
-            Kalkulator Realita Judol
+            Realita Judol
           </button>
           <button
             className={`${styles.tabBtn} ${activeTab === "pinjol" ? styles.tabActive : ""}`}
             onClick={() => setActiveTab("pinjol")}
           >
-            Simulasi Efek Bola Salju Pinjol
+            Simulasi Pinjol
           </button>
         </div>
         <div className={styles.cardContainer}>

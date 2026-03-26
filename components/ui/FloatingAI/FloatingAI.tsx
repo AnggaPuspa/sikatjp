@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import MarkdownMessage from "@/components/ui/MarkdownMessage/MarkdownMessage";
 import { FLOATING_AI_SYSTEM_PROMPT } from "@/lib/constants/floatingAIPrompt";
 import styles from "./FloatingAI.module.css";
@@ -34,6 +35,7 @@ export default function FloatingAI() {
   const [isTyping, setIsTyping] = useState(false);
   const [showGreeting, setShowGreeting] = useState(false);
   const [greetingIndex, setGreetingIndex] = useState(0);
+  const [isPastHero, setIsPastHero] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   // ===== GREETINGS =====
@@ -43,8 +45,6 @@ export default function FloatingAI() {
     "💬 Tanya apa saja tentang pinjol & judol",
     "🚨 Butuh bantuan darurat? Klik di sini",
   ];
-  const [isVisible, setIsVisible] = useState(false);
-
   // ===== HANDLERS =====
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -52,50 +52,54 @@ export default function FloatingAI() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-
   useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isOpen]);
-
+  const pathname = usePathname();
   useEffect(() => {
-    const handleScroll = () => {
-      // Show FAB after scrolling out of hero (~300px)
-      setIsVisible(window.scrollY > 300);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    setIsPastHero(false);
+    setShowGreeting(false);
 
-  useEffect(() => {
-    let hideTimer: NodeJS.Timeout;
-
-    const showGreetingTemp = () => {
-      setShowGreeting(true);
-      hideTimer = setTimeout(() => {
-        setShowGreeting(false);
-      }, 6000); // Auto hide after 6 seconds
-    };
-
-    const showTimer = setTimeout(() => {
-      if (!isOpen && isVisible) showGreetingTemp();
-    }, 2500);
-
-    const cycleInterval = setInterval(() => {
-      if (!isOpen && isVisible) {
-        setGreetingIndex((prev) => (prev + 1) % 4);
-        showGreetingTemp();
+    const raf = requestAnimationFrame(() => {
+      const heroEl =
+        document.getElementById("hero") ||
+        document.querySelector("section:first-of-type") ||
+        document.querySelector("[data-section='hero']");
+      if (!heroEl) {
+        setIsPastHero(true);
+        return;
       }
-    }, 120000); // 2 menit sekali
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsPastHero(!entry.isIntersecting);
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(heroEl);
+      return () => observer.disconnect();
+    });
 
+    return () => cancelAnimationFrame(raf);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!isPastHero) {
+      setShowGreeting(false);
+      return;
+    }
+    const showTimer = setTimeout(() => {
+      if (!isOpen) setShowGreeting(true);
+    }, 1500);
+    const cycleInterval = setInterval(() => {
+      setGreetingIndex((prev) => (prev + 1) % 4);
+    }, 6000);
     return () => {
       clearTimeout(showTimer);
-      clearTimeout(hideTimer);
       clearInterval(cycleInterval);
     };
-  }, [isOpen, isVisible]);
+  }, [isOpen, isPastHero]);
   // ===== SEND =====
   const handleSend = async (text: string) => {
     if (!text.trim()) return;
@@ -211,9 +215,8 @@ export default function FloatingAI() {
           {messages.map((msg, i) => (
             <div
               key={i}
-              className={`${styles.message} ${
-                msg.role === "user" ? styles.userMsg : styles.aiMsg
-              }`}
+              className={`${styles.message} ${msg.role === "user" ? styles.userMsg : styles.aiMsg
+                }`}
             >
               {msg.role === "ai" && <div className={styles.msgAvatar}>✦</div>}
               <div className={styles.msgBubble}>
@@ -284,7 +287,14 @@ export default function FloatingAI() {
         </div>
       )}
       <button
-        className={`${styles.fab} ${!isVisible ? styles.fabHideTop : ""} ${isOpen ? styles.fabHidden : ""}`}
+        key={isPastHero ? "fab-visible" : "fab-hidden"}
+        className={`${styles.fab} ${
+          isOpen
+            ? styles.fabHidden
+            : isPastHero
+            ? styles.fabVisible
+            : styles.fabHidden
+        }`}
         onClick={() => {
           setIsOpen(true);
           setShowGreeting(false);

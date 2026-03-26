@@ -1,0 +1,474 @@
+.heroSection {
+  width: 100%;
+  padding: 4rem 2.5rem 2rem 2.5rem;
+  margin-top: 2rem;
+  background-color: transparent;
+  position: relative;
+  overflow: visible;
+}
+
+.heroSplit {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 3rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 4.5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: #111827;
+  letter-spacing: -0.04em;
+  margin: 0 0 1.5rem 0;
+}
+
+.heroDesc {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+  max-width: 620px;
+}
+
+.liveCard {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3f4f6;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.liveCard:hover {
+  transform: translateY(-2px);
+}
+
+.topCardsRow {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  gap: 1.5rem;
+}
+
+.cardHeaderSmall {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.cardInfoGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cardHeaderTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.cardHeaderDate {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.cardSettingsIcon {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  background: #f9fafb;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid #f3f4f6;
+}
+
+.mainValue {
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #111827;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.unitUnderline {
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.cardSubValueText {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 1.25rem;
+}
+
+.stripedProgressContainer {
+  height: 24px;
+  background: #f9fafb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.stripedProgressFill {
+  height: 100%;
+  background: #34d399;
+  background-image: repeating-linear-gradient(45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.2) 10px,
+      rgba(255, 255, 255, 0.2) 20px);
+  border-radius: 8px;
+}
+
+.cardUsers {
+  background: #d8b4fe;
+  color: #111827;
+}
+
+.cardHeaderTitleLight {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #581c87;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mainValueLight {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #111827;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+}
+
+.miniBarChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 80px;
+}
+
+.miniBar {
+  flex: 1;
+  background: #c084fc;
+  background-image: repeating-linear-gradient(45deg,
+      transparent,
+      transparent 5px,
+      rgba(255, 255, 255, 0.1) 5px,
+      rgba(255, 255, 255, 0.1) 10px);
+  border-radius: 6px;
+}
+
+.miniBarActive {
+  background: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.miniBarTrend {
+  position: absolute;
+  top: -24px;
+  background: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.bottomMainContainer {
+  height: 400px;
+  background: #d1d5db;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainOrbWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liquidBubble {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, #93c5fd 0%, transparent 60%),
+    radial-gradient(circle at 10% 80%, #f9a8d4 0%, transparent 50%),
+    rgba(255, 255, 255, 0.2);
+  filter: blur(2px);
+  box-shadow:
+    inset -20px -20px 60px rgba(0, 0, 0, 0.1),
+    inset 20px 20px 60px rgba(255, 255, 255, 0.8),
+    0 40px 100px rgba(0, 0, 0, 0.05);
+  animation: liquidMove 8s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liquidBubble::before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: conic-gradient(from 180deg at 50% 50%,
+      rgba(233, 213, 255, 0.3) 0deg,
+      rgba(147, 197, 253, 0.3) 90deg,
+      rgba(249, 168, 212, 0.3) 180deg,
+      rgba(254, 240, 138, 0.3) 270deg,
+      rgba(233, 213, 255, 0.3) 360deg);
+  filter: blur(40px);
+}
+
+@keyframes liquidMove {
+
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+    border-radius: 45% 55% 50% 50% / 50% 50% 45% 55%;
+  }
+
+  33% {
+    transform: scale(1.02) translate(5px, -5px);
+    border-radius: 50% 50% 55% 45% / 45% 55% 50% 50%;
+  }
+
+  66% {
+    transform: scale(0.98) translate(-5px, 5px);
+    border-radius: 55% 45% 50% 50% / 50% 50% 55% 45%;
+  }
+}
+
+.cardFloatingBottom {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 280px;
+  z-index: 5;
+  padding: 1.5rem;
+  background: white;
+}
+
+.valueRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.trendPillGreen {
+  background: #34d399;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+}
+
+.solidProgressContainer {
+  height: 8px;
+  background: #f3f4f6;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.solidProgressFill {
+  height: 100%;
+  background: #34d399;
+  border-radius: 999px;
+}
+
+.highlight {
+  background: #e9d5ff;
+  padding: 0.1rem 0.6rem;
+  border-radius: 16px;
+  display: inline-block;
+  line-height: 1.1;
+  color: #111827;
+}
+
+.heroCta {
+  background-color: #111827;
+  background-image: repeating-linear-gradient(45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.03) 10px,
+      rgba(255, 255, 255, 0.03) 20px);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.6rem 0.6rem 0.6rem 2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(17, 24, 39, 0.15);
+}
+
+.heroCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(17, 24, 39, 0.2);
+}
+
+.heroCta:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+.ctaArrow {
+  background: white;
+  color: #111827;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.heroFooter {
+  margin-top: 4rem;
+}
+
+.heroFooterText {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.heroLogos {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.heroLogo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #9ca3af;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.heroLogo:hover {
+  color: #111827;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 3rem 0 2rem 0;
+  }
+
+  .heroSplit {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .heroRight {
+    padding-top: 0;
+    flex-direction: row;
+  }
+
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  .heroSplit {
+    gap: 2rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroDesc {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 1.5rem 0 1rem 0;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroDesc {
+    font-size: 0.95rem;
+  }
+
+  .mainValue {
+    font-size: 2rem;
+  }
+}

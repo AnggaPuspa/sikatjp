@@ -1,10 +1,9 @@
-'use client';
 import React from 'react';
 import styles from './TentangHero.module.css';
 export default function TentangHero() {
   return (
     <>
-      <section className={styles.fullBleedHero}>
+      <section id="hero" className={styles.fullBleedHero}>
         <div className={styles.dnaCanvas}>
           <div className={styles.gridOverlay}></div>
           <div className={styles.pastelSphereGiant}></div>

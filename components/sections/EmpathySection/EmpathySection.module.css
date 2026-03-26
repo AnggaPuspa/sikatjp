@@ -1,10 +1,39 @@
 .section {
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: visible;
   width: 100%;
   padding: 2rem 2rem 4rem 2rem;
   background-color: transparent;
 }
+
+.section::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.15), transparent 70%);
+  filter: blur(60px);
+  top: -100px;
+  right: -200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.15), transparent 70%);
+  filter: blur(80px);
+  bottom: -200px;
+  left: -200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -13,6 +42,7 @@
   max-width: 1200px;
   gap: 5rem;
 }
+
 .header {
   display: flex;
   flex-direction: column;
@@ -21,6 +51,7 @@
   max-width: 100%;
   text-align: left;
 }
+
 .badgeSolid {
   display: inline-flex;
   align-items: center;
@@ -34,6 +65,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
 .title {
   font-size: 4.5rem;
   font-weight: 400;
@@ -43,6 +75,7 @@
   margin: 0 0 1.5rem 0;
   text-align: left;
 }
+
 .subtitle {
   color: #6b7280;
   font-size: 1.25rem;
@@ -51,21 +84,27 @@
   text-align: left;
   max-width: 650px;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 2rem;
   width: 100%;
 }
+
 .mainCard {
-  background-color: transparent;
-  border: 1.5px solid #111827;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   padding: 5rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .mainQuote {
   font-size: 3.5rem;
   font-weight: 400;
@@ -74,12 +113,14 @@
   letter-spacing: -0.05em;
   margin: 0 0 4rem 0;
 }
+
 .author {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-top: auto;
 }
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -91,30 +132,38 @@
   font-weight: 500;
   width: fit-content;
 }
+
 .authorRole {
   font-size: 0.95rem;
   color: #6b7280;
   font-weight: 500;
 }
+
 .sideColumn {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   justify-content: space-between;
 }
+
 .smallCard {
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   padding: 3rem;
-  border: 1.5px solid #111827;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
 }
+
 .staggeredCard {
   margin-left: 0;
 }
+
 .smallQuoteText {
   font-size: 1.5rem;
   font-weight: 400;
@@ -123,70 +172,102 @@
   letter-spacing: -0.03em;
   margin: 0 0 2rem 0;
 }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .section {
     padding: 1.5rem 2rem 3rem 2rem;
   }
+
+  .section::before {
+    width: 350px;
+    height: 350px;
+    top: -50px;
+    right: -100px;
+  }
+
+  .section::after {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .staggeredCard {
     margin-left: 0;
   }
+
   .mainCard {
     padding: 3rem 2.5rem;
   }
+
   .mainQuote {
     font-size: 3rem;
     margin-bottom: 3rem;
   }
 }
+
 @media (max-width: 768px) {
   .section {
     padding: 2rem 1.5rem;
   }
+
   .container {
     gap: 2rem;
   }
+
   .title {
     font-size: 2.5rem;
   }
+
   .subtitle {
     font-size: 1rem;
     max-width: 100%;
   }
+
   .mainCard {
     padding: 2.5rem 1.75rem;
   }
+
   .mainQuote {
     font-size: 2rem;
     margin-bottom: 2.5rem;
   }
+
   .smallCard {
     padding: 2rem 1.5rem;
   }
+
   .smallQuoteText {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
   }
+
   .author {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
   }
 }
+
 @media (max-width: 480px) {
   .section {
     padding: 1.5rem 1rem;
   }
+
   .title {
     font-size: 2rem;
   }
+
   .mainQuote {
     font-size: 1.75rem;
   }
+
   .smallQuoteText {
     font-size: 1.1rem;
   }

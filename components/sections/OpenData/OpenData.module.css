@@ -1,0 +1,34 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  background-color: #f9fafb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
+  gap: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 3rem 2rem;
+  }
+  .container {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1.5rem;
+  }
+  .container {
+    gap: 2rem;
+  }
+}
