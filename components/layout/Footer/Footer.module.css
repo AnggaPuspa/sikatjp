@@ -162,8 +162,8 @@
 }
 .linksGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem 1.5rem;
 }
 .linkGroup {
     display: flex;

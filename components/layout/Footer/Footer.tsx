@@ -43,6 +43,14 @@ export default function Footer() {
                 <Link href="/bantuan-darurat" className={styles.linkItem}>Unit Mitigasi Darurat (Help)</Link>
               </div>
               <div className={styles.linkGroup}>
+                <span className={styles.groupTitle}>Data Riset</span>
+                <Link href="/open-data" className={styles.linkItem}>Katalog Open Data</Link>
+                <Link href="/data/pinjol" className={styles.linkItem}>Statistik Pinjol</Link>
+                <Link href="/data/judol" className={styles.linkItem}>Statistik Judol</Link>
+                <Link href="/data/laporan" className={styles.linkItem}>Laporan Tahunan</Link>
+                <Link href="/data/survei" className={styles.linkItem}>Survei Korban</Link>
+              </div>
+              <div className={styles.linkGroup}>
                 <span className={styles.groupTitle}>Akses Cepat Hotline</span>
                 <Link href="/bantuan-darurat" className={styles.linkItem}>Lapor Satgas PASTI / OJK (157)</Link>
                 <Link href="/bantuan-darurat" className={styles.linkItem}>Panggil Layanan Sehat Jiwa (119)</Link>
@@ -50,6 +58,7 @@ export default function Footer() {
                 <Link href="/bantuan-darurat" className={styles.linkItem}>Konseling Restrukturisasi (Bot)</Link>
               </div>
             </div>
+
             <div className={styles.copyright}>
               <strong>© 2026 SIKAT JP. Hak Cipta Dilindungi.</strong><br/>
               Platform independen, bukan penyelenggara perjudian / peminjaman online.
