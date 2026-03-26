@@ -1,0 +1,280 @@
+.section {
+  width: 100%;
+  padding: 4rem 0 8rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 3rem;
+  transition: color 0.2s;
+  width: fit-content;
+}
+
+.backLink:hover {
+  color: #111827;
+}
+
+.header {
+  margin-bottom: 4rem;
+  border-bottom: 2px solid #111827;
+  padding-bottom: 3rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid #111827;
+  color: #111827;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #111827;
+  letter-spacing: -0.04em;
+  margin: 0 0 2rem 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.metaDivider {
+  width: 1px;
+  height: 16px;
+  background-color: #d1d5db;
+}
+
+.contentBody {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.executiveSummary {
+  font-size: 1.35rem;
+  line-height: 1.8;
+  color: #111827;
+  font-weight: 400;
+}
+
+.dropCap::first-letter {
+  font-size: 5rem;
+  font-weight: 500;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.75rem;
+  color: #111827;
+  padding-top: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: #111827;
+  font-weight: 500;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.03em;
+}
+
+.findingsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.findingCard {
+  background-color: transparent;
+  border: 1.5px solid #111827;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.findingNumber {
+  font-size: 4.5rem;
+  color: #111827;
+  font-weight: 300;
+  line-height: 0.8;
+  opacity: 0.2;
+}
+
+.findingContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.findingTitle {
+  font-size: 1.5rem;
+  color: #111827;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.findingDesc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+.ctaContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.ctaButton {
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 1.25rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+.tableContainer {
+  margin-top: 5rem;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #111827;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tableTitle {
+  font-size: 2rem;
+  color: #111827;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTable th, .dataTable td {
+  padding: 1.5rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 1.25rem;
+  color: #111827;
+  font-weight: 500;
+}
+
+.dataTable th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  font-weight: 600;
+  border-bottom: 1.5px solid #111827;
+}
+
+.dataTable tr:hover td {
+  background-color: #f3f4f6;
+}
+
+.dataTable td.valueCell {
+  font-family: monospace;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.valueTotal {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0 5rem 0;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .executiveSummary {
+    font-size: 1.15rem;
+  }
+  .findingCard {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem;
+  }
+  .findingNumber {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.85rem;
+  }
+  .executiveSummary {
+    font-size: 1rem;
+  }
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+  }
+}

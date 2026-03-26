@@ -1,0 +1,270 @@
+.section {
+  width: 100%;
+  padding: 4rem 0 8rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s;
+  width: fit-content;
+}
+
+.backLink:hover {
+  color: #111827;
+}
+
+.header {
+  margin-bottom: 4rem;
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #111827;
+  letter-spacing: -0.05em;
+  margin: 0 0 1.5rem 0;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.searchWrapper {
+  width: 100%;
+  max-width: 650px;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1.15rem 1.5rem 1.15rem 3.5rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 999px;
+  color: #111827;
+  transition: border-color 0.2s ease;
+  outline: none;
+  font-family: inherit;
+}
+
+.searchInput:focus {
+  border-color: #111827;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.noResults {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.noResults i {
+  font-size: 1.5rem;
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: #111827;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-height: 800px;
+  overflow-y: auto;
+  padding-right: 1.5rem;
+}
+
+/* Custom scrollbar for Big Data */
+.list::-webkit-scrollbar {
+  width: 8px;
+}
+.list::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+.list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 8px;
+}
+.list::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.itemName {
+  font-size: 1.15rem;
+  color: #111827;
+  font-weight: 500;
+}
+
+.itemSub {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.statusLegal {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid #111827;
+  color: #111827;
+  background-color: transparent;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.statusIlegal {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background-color: #ef4444;
+  border: 1.5px solid #ef4444;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0 6rem 0;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  .card {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 0 4rem 0;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .card {
+    padding: 1.25rem;
+  }
+  .itemName {
+    font-size: 1.05rem;
+  }
+  .itemSub {
+    font-size: 0.8rem;
+  }
+}
