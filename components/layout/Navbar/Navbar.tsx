@@ -49,22 +49,22 @@ export default function Navbar() {
           <ul className={styles.navLinks}>
             <li>
               <Link href="/" className={styles.navLink}>
-                Markas Pusat
+                Beranda
               </Link>
             </li>
             <li>
               <Link href="/tentang" className={styles.navLink}>
-                Manifesto
+                Tentang
               </Link>
             </li>
             <li>
               <Link href="/kalkulator" className={styles.navLink}>
-                Lab Simulasi
+                Simulasi
               </Link>
             </li>
             <li>
               <Link href="/bantuan-darurat" className={styles.navLink}>
-                Mitigasi Darurat
+                Bantuan
               </Link>
             </li>
           </ul>
@@ -89,19 +89,19 @@ export default function Navbar() {
         <nav className={styles.mobileNav}>
           <Link href="/" className={styles.mobileLink} onClick={closeMenu}>
             <span className={styles.mobileLinkNum}>01</span>
-            <span className={styles.mobileLinkText}>Markas Pusat</span>
+            <span className={styles.mobileLinkText}>Beranda</span>
           </Link>
           <Link href="/tentang" className={styles.mobileLink} onClick={closeMenu}>
             <span className={styles.mobileLinkNum}>02</span>
-            <span className={styles.mobileLinkText}>Manifesto</span>
+            <span className={styles.mobileLinkText}>Tentang</span>
           </Link>
           <Link href="/kalkulator" className={styles.mobileLink} onClick={closeMenu}>
             <span className={styles.mobileLinkNum}>03</span>
-            <span className={styles.mobileLinkText}>Lab Simulasi</span>
+            <span className={styles.mobileLinkText}>Simulasi</span>
           </Link>
           <Link href="/bantuan-darurat" className={styles.mobileLink} onClick={closeMenu}>
             <span className={styles.mobileLinkNum}>04</span>
-            <span className={styles.mobileLinkText}>Mitigasi Darurat</span>
+            <span className={styles.mobileLinkText}>Bantuan</span>
           </Link>
         </nav>
         <div className={styles.mobileFooter}>
