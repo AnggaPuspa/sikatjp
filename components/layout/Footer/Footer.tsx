@@ -50,13 +50,6 @@ export default function Footer() {
                 <Link href="/data/laporan" className={styles.linkItem}>Laporan Tahunan</Link>
                 <Link href="/data/survei" className={styles.linkItem}>Survei Korban</Link>
               </div>
-              <div className={styles.linkGroup}>
-                <span className={styles.groupTitle}>Akses Cepat Hotline</span>
-                <Link href="/bantuan-darurat" className={styles.linkItem}>Lapor Satgas PASTI / OJK (157)</Link>
-                <Link href="/bantuan-darurat" className={styles.linkItem}>Panggil Layanan Sehat Jiwa (119)</Link>
-                <Link href="/bantuan-darurat" className={styles.linkItem}>Aduan Blokir Rekening</Link>
-                <Link href="/bantuan-darurat" className={styles.linkItem}>Konseling Restrukturisasi (Bot)</Link>
-              </div>
             </div>
 
             <div className={styles.copyright}>
