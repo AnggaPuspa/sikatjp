@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Navbar.module.css";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,15 +37,13 @@ export default function Navbar() {
           className={`${styles.navbar} ${scrolled ? styles.navbarScrolled : ""}`}
         >
           <Link href="/" className={styles.logoContainer} onClick={closeMenu}>
-            <svg
+            <Image
+              src="/logo-sikat1.png"
+              alt="SIKAT JP Emblem"
               className={styles.logoIcon}
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path d="M12 2C12 7.52285 16.4772 12 22 12C16.4772 12 12 16.4772 12 22C12 16.4772 7.52285 12 2 12C7.52285 12 12 7.52285 12 2Z" />
-            </svg>
+              width={28}
+              height={28}
+            />
             <span className={styles.logoText}>SIKAT JP</span>
           </Link>
           <ul className={styles.navLinks}>

@@ -43,6 +43,8 @@ export default function FloatingAI() {
     "💬 Tanya apa saja tentang pinjol & judol",
     "🚨 Butuh bantuan darurat? Klik di sini",
   ];
+  const [isVisible, setIsVisible] = useState(false);
+
   // ===== HANDLERS =====
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -50,23 +52,50 @@ export default function FloatingAI() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
   useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isOpen]);
+
   useEffect(() => {
+    const handleScroll = () => {
+      // Show FAB after scrolling out of hero (~300px)
+      setIsVisible(window.scrollY > 300);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    let hideTimer: NodeJS.Timeout;
+
+    const showGreetingTemp = () => {
+      setShowGreeting(true);
+      hideTimer = setTimeout(() => {
+        setShowGreeting(false);
+      }, 6000); // Auto hide after 6 seconds
+    };
+
     const showTimer = setTimeout(() => {
-      if (!isOpen) setShowGreeting(true);
-    }, 1500);
+      if (!isOpen && isVisible) showGreetingTemp();
+    }, 2500);
+
     const cycleInterval = setInterval(() => {
-      setGreetingIndex((prev) => (prev + 1) % 4);
-    }, 6000);
+      if (!isOpen && isVisible) {
+        setGreetingIndex((prev) => (prev + 1) % 4);
+        showGreetingTemp();
+      }
+    }, 120000); // 2 menit sekali
+
     return () => {
       clearTimeout(showTimer);
+      clearTimeout(hideTimer);
       clearInterval(cycleInterval);
     };
-  }, [isOpen]);
+  }, [isOpen, isVisible]);
   // ===== SEND =====
   const handleSend = async (text: string) => {
     if (!text.trim()) return;
@@ -255,7 +284,7 @@ export default function FloatingAI() {
         </div>
       )}
       <button
-        className={`${styles.fab} ${isOpen ? styles.fabHidden : ""}`}
+        className={`${styles.fab} ${!isVisible ? styles.fabHideTop : ""} ${isOpen ? styles.fabHidden : ""}`}
         onClick={() => {
           setIsOpen(true);
           setShowGreeting(false);

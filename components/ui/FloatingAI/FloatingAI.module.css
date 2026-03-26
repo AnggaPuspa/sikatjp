@@ -5,23 +5,32 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
-    border: 1.5px solid rgba(17, 24, 39, 0.1);
-    color: #111827;
+    background: #111827;
+    border: 2px solid #ffffff;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 9998;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 8px 32px rgba(166, 192, 254, 0.4);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 8px 0 rgba(17, 24, 39, 1);
 }
 .fab:hover {
-    transform: scale(1.08);
-    box-shadow: 0 12px 40px rgba(166, 192, 254, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 0 rgba(17, 24, 39, 1);
+}
+.fab:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 rgba(17, 24, 39, 1);
 }
 .fabHidden {
     transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
+.fabHideTop {
+    transform: translateY(-80px) scale(0.9);
     opacity: 0;
     pointer-events: none;
 }
@@ -34,8 +43,9 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
-    animation: pulse 2.5s ease-out infinite;
+    border: 2px solid #111827;
+    background: transparent;
+    animation: pulse 2s ease-out infinite;
     z-index: 0;
 }
 @keyframes pulse {
@@ -97,9 +107,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.25rem 1.5rem;
-    background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
-    color: #111827;
+    background: #111827;
+    color: #ffffff;
     flex-shrink: 0;
+    border-bottom: 2px solid #111827;
 }
 .headerLeft {
     display: flex;
@@ -110,26 +121,28 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
+    background: #ffffff;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #111827;
     font-weight: 700;
 }
 .headerTitle {
     font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: #111827;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 .headerStatus {
     display: flex;
     align-items: center;
     gap: 0.35rem;
     font-size: 0.7rem;
-    color: rgba(17, 24, 39, 0.6);
+    color: rgba(255, 255, 255, 0.7);
 }
 .onlineDot {
     width: 6px;
@@ -140,7 +153,7 @@
 .closeBtn {
     background: transparent;
     border: none;
-    color: rgba(17, 24, 39, 0.5);
+    color: #ffffff;
     font-size: 1rem;
     cursor: pointer;
     width: 32px;
@@ -152,7 +165,7 @@
     transition: all 0.2s;
 }
 .closeBtn:hover {
-    background-color: rgba(17, 24, 39, 0.1);
+    background-color: #ffffff;
     color: #111827;
 }
 .messagesArea {
@@ -178,12 +191,13 @@
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
+    background: #111827;
+    border: 2px solid #111827;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: #111827;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 .welcomeTitle {
@@ -279,12 +293,13 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
+    background: #111827;
+    border: 1.5px solid #111827;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
-    color: #111827;
+    font-size: 0.85rem;
+    color: #ffffff;
     flex-shrink: 0;
     margin-top: 2px;
 }
@@ -395,19 +410,19 @@
 }
 .greetingBubble {
     position: fixed;
-    bottom: 2.75rem;
-    right: 5.5rem;
+    bottom: 3.25rem;
+    right: 5.25rem;
     background-color: #ffffff;
-    border: 1.5px solid rgba(17, 24, 39, 0.12);
-    border-radius: 16px 16px 4px 16px;
-    padding: 0.75rem 1rem;
+    border: 2px solid #111827;
+    border-radius: 12px 12px 0 12px;
+    padding: 0.85rem 1.15rem;
     display: flex;
     align-items: center;
     gap: 0.75rem;
     z-index: 9997;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 4px 4px 0 #111827;
     animation: greetSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    max-width: 260px;
+    max-width: 280px;
     font-size: 0.85rem;
     font-weight: 500;
     color: #111827;
@@ -463,5 +478,11 @@
     }
     .messagesArea {
         max-height: 50vh;
+    }
+    .greetingBubble {
+        bottom: 2.25rem;
+        right: 4.75rem;
+        max-width: 240px;
+        padding: 0.75rem 1rem;
     }
 }
