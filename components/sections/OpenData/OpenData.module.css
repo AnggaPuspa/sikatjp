@@ -12,23 +12,30 @@
   flex-direction: column;
   width: 90%;
   max-width: 1200px;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 @media (max-width: 1024px) {
-  .section {
-    padding: 3rem 2rem;
-  }
   .container {
-    gap: 3rem;
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 2rem 1.5rem;
+    padding: 0 1rem;
   }
   .container {
-    gap: 2rem;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 0 0.75rem;
+  }
+  .container {
+    gap: 0.5rem;
   }
 }

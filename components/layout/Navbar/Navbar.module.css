@@ -77,6 +77,16 @@
 .navLink:hover {
     color: #111111;
 }
+.navLinkActive {
+    color: #111111;
+    font-weight: 600;
+}
+.mobileLinkActive .mobileLinkText {
+    font-weight: 600;
+}
+.mobileLinkActive .mobileLinkNum {
+    color: #111827;
+}
 
 .hamburger {
     display: none;

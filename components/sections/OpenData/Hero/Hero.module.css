@@ -429,35 +429,110 @@
 
   .heroRight {
     padding-top: 0;
-    flex-direction: row;
   }
 
   .heroTitle {
     font-size: 3.5rem;
   }
+
+  .bottomMainContainer {
+    height: 300px;
+  }
 }
 
 @media (max-width: 768px) {
   .heroSection {
-    padding: 2rem 0 1.5rem 0;
+    padding: 1.5rem 0 1rem 0;
+    margin-top: 0;
   }
 
   .heroSplit {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .heroTitle {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   .heroDesc {
     font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .heroCta {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .ctaArrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .topCardsRow {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .liveCard {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .mainValue {
+    font-size: 1.75rem;
+  }
+
+  .mainValueLight {
+    font-size: 1.5rem;
+  }
+
+  .bottomMainContainer {
+    height: 260px;
+    border-radius: 24px;
+  }
+
+  .liquidBubble {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cardFloatingBottom {
+    width: 220px;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1.25rem;
+  }
+
+  .heroFooter {
+    margin-top: 2rem;
+  }
+
+  .heroFooterText {
+    font-size: 0.7rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .heroLogos {
+    gap: 1.25rem;
+  }
+
+  .heroLogo {
+    font-size: 1rem;
+  }
+
+  .miniBarChart {
+    height: 50px;
   }
 }
 
 @media (max-width: 480px) {
   .heroSection {
-    padding: 1.5rem 0 1rem 0;
+    padding: 1rem 0 0.5rem 0;
   }
 
   .heroTitle {
@@ -468,7 +543,67 @@
     font-size: 0.95rem;
   }
 
+  .heroRight {
+    gap: 1rem;
+  }
+
+  .topCardsRow {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
   .mainValue {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .cardHeaderTitle {
+    font-size: 0.8rem;
+  }
+
+  .cardHeaderDate {
+    font-size: 0.65rem;
+  }
+
+  .bottomMainContainer {
+    height: 220px;
+    border-radius: 20px;
+  }
+
+  .liquidBubble {
+    width: 160px;
+    height: 160px;
+  }
+
+  .cardFloatingBottom {
+    width: 180px;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 1rem;
+  }
+
+  .cardFloatingBottom .mainValue {
+    font-size: 1.25rem;
+  }
+
+  .heroCta {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  .heroLogos {
+    gap: 1rem;
+  }
+
+  .heroLogo {
+    font-size: 0.9rem;
+  }
+
+  .miniBarChart {
+    height: 40px;
+  }
+
+  .miniBarTrend {
+    font-size: 0.55rem;
+    top: -18px;
   }
 }

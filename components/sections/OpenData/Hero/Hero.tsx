@@ -7,7 +7,7 @@ const OpenDataHero = () => {
         <div id="hero" className={styles.heroSection}>
           <div className={styles.heroSplit}>
             <div className={styles.heroLeft}>
-              <div className={styles.badge}>DIPERBARUI APRIL 2024</div>
+
               <h1 className={styles.heroTitle}>
                 Transparansi. <span className={styles.highlight}>Akuntabel.</span>
                 <br />

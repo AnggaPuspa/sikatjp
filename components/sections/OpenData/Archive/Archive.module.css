@@ -1,15 +1,59 @@
 .datasetSection {
   width: 100%;
-  padding-top: 4rem;
-  border-top: 1.5px solid #111827;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  background-color: transparent;
 }
 
-.datasetHeader {
-  margin-bottom: 4rem;
-  max-width: 900px;
+.datasetSection::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, #60a5fa50, transparent 70%);
+  filter: blur(60px);
+  top: -150px;
+  left: -200px;
+  z-index: -1;
+  border-radius: 50%;
 }
 
-.datasetBadge {
+.datasetSection::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #f472b650, transparent 70%);
+  filter: blur(70px);
+  bottom: -300px;
+  right: -150px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+}
+
+.badgeSolid {
   display: inline-flex;
   align-items: center;
   padding: 0.4rem 1rem;
@@ -18,148 +62,175 @@
   color: #111827;
   font-size: 0.85rem;
   font-weight: 500;
-  margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  width: fit-content;
 }
 
-.datasetTitle {
+.header .badgeSolid {
+  margin-bottom: 1.5rem;
+}
+
+.title {
   font-size: 4.5rem;
   font-weight: 400;
-  letter-spacing: -0.05em;
-  color: #111827;
-  margin: 0 0 1.5rem 0;
   line-height: 1.1;
+  color: #111827;
+  letter-spacing: -0.05em;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
 }
 
-.datasetDesc {
-  color: #6b7280;
+.subtitle {
+  color: #4b5563;
   font-size: 1.25rem;
-  font-weight: 400;
   line-height: 1.6;
   margin: 0;
+  text-align: left;
+  max-width: 750px;
 }
 
 .datasetList {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
 }
 
-.dataRow {
+.dataCard {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 3.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.5rem;
-  background-color: #ffffff;
-  border-radius: 20px;
-  border: 1.5px solid #111827;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  min-height: 240px;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.dataRow:hover {
+.dataCard:hover {
   transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-.fileInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-}
-
-.fileNameRow {
+.dataHeader {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   flex-wrap: wrap;
-}
-
-.fileName {
-  font-size: 1.05rem;
-  color: #111827;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  font-family: 'Courier New', monospace;
-  word-break: break-word;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 .masterBadge {
-  font-size: 0.65rem;
-  font-weight: 700;
-  background-color: #ef4444;
-  color: #ffffff;
-  padding: 0.25rem 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
   border-radius: 999px;
-  letter-spacing: 0.05em;
+  background-color: #ef4444;
+  border: 1.5px solid #ef4444;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
   text-transform: uppercase;
-  white-space: nowrap;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.fileName {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #111827;
+  letter-spacing: -0.04em;
+  margin: 0 0 1.5rem 0;
+  word-break: break-word;
+}
+
+.fileDesc {
+  color: #111827;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
 }
 
 .fileMeta {
-  font-size: 0.85rem;
-  color: #6b7280;
+  font-size: 0.95rem;
+  color: #9ca3af;
   font-weight: 400;
-  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.01em;
 }
 
-.downloadBtn {
+.ctaButton {
   background-color: #0a0a0a;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 6px,
-    rgba(255, 255, 255, 0.04) 6px,
-    rgba(255, 255, 255, 0.04) 12px
-  );
+  background-image: repeating-linear-gradient(45deg,
+      transparent, transparent 6px,
+      rgba(255, 255, 255, 0.04) 6px, rgba(255, 255, 255, 0.04) 12px);
   color: #ffffff;
   border: none;
   border-radius: 999px;
-  padding: 0.9rem 1.75rem;
-  font-size: 0.85rem;
-  font-weight: 500;
+  padding: 1.1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: opacity 0.2s;
-  white-space: nowrap;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-top: auto;
 }
 
-.downloadBtn:hover {
+.ctaButton:hover {
   opacity: 0.9;
 }
 
+@media (max-width: 1024px) {
+  .datasetSection::before {
+    width: 400px;
+    height: 400px;
+    top: -80px;
+    left: -120px;
+  }
+
+  .datasetSection::after {
+    width: 350px;
+    height: 350px;
+    bottom: -50px;
+    right: -80px;
+  }
+  .datasetSection { padding: 1.5rem 1.5rem; }
+  .datasetList { grid-template-columns: 1fr; }
+  .title { font-size: 3.5rem; }
+}
+
 @media (max-width: 768px) {
-  .datasetHeader {
-    max-width: 100%;
-  }
-  .datasetTitle {
-    font-size: 2.5rem;
-  }
-  .datasetDesc {
-    font-size: 1rem;
-  }
-  .datasetList {
-    grid-template-columns: 1fr;
-  }
-  .dataRow {
-    padding: 2rem;
-    min-height: auto;
-  }
+  .title { font-size: 2.5rem; }
+  .subtitle { font-size: 1.1rem; }
+  .dataCard { padding: 2rem 1.5rem; }
+  .fileName { font-size: 1.25rem; }
+  .fileDesc { font-size: 0.95rem; }
+  .fileMeta { font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .datasetSection { padding: 1rem 0; }
+  .container { gap: 2rem; width: 95%; }
+  .badgeSolid { font-size: 0.75rem; padding: 0.35rem 0.85rem; }
+  .masterBadge { font-size: 0.75rem; padding: 0.35rem 0.85rem; }
+  .ctaButton { padding: 0.9rem 1.5rem; font-size: 0.9rem; }
+  .dataHeader { margin-bottom: 1.25rem; }
 }
 
 @media (max-width: 480px) {
-  .datasetTitle {
-    font-size: 2rem;
-  }
-  .datasetDesc {
-    font-size: 0.95rem;
-  }
-  .dataRow {
-    padding: 1.75rem;
-  }
-  .fileName {
-    font-size: 0.95rem;
-  }
+  .title { font-size: 2rem; }
+  .subtitle { font-size: 1rem; max-width: 100%; }
+  .dataCard { padding: 1.5rem 1.25rem; border-radius: 16px; }
+  .fileName { font-size: 1.1rem; margin-bottom: 1rem; }
+  .fileDesc { font-size: 0.9rem; margin-bottom: 1rem; }
+  .fileMeta { font-size: 0.8rem; margin-bottom: 1.25rem; }
+  .datasetSection { padding: 0.5rem 0; }
+  .container { gap: 1.5rem; }
+  .datasetList { gap: 1rem; }
+  .ctaButton { padding: 0.85rem 1.25rem; font-size: 0.85rem; }
+  .header .badgeSolid { margin-bottom: 1rem; }
 }
